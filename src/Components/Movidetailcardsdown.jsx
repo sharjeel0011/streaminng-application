@@ -55,7 +55,7 @@ const SimilarContents = () => {
           </div>
         ))}
       </div>
-      <button className="mt-6 w-full bg-gray-800 text-white py-3 px-6 rounded-md hover:bg-gray-400 flex items-center justify-center gap-2 transition">
+      <button className="mt-6 w-full bg-neutral-800 text-white py-3 px-6 rounded-md hover:bg-gray-400 flex items-center justify-center gap-2 transition">
       <CgAdd  className="text-lg" />
       <span>Show More</span>
      

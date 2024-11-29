@@ -1,25 +1,35 @@
 import React from "react";
 import { FaPlay, FaPlus, FaRegHeart, FaStar } from "react-icons/fa";
 import MovieDetailscardsdown from '../../Components/Movidetailcardsdown'
+import VideoPlayer from "../../Components/VideoPlayerThreeTypes/VideoPlayerWithController";
 const MovieDetails = () => {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Background Image with Overlay */}
-      <div
-        className="relative h-96 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://via.placeholder.com/1920x1080')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <button className="bg-white text-black p-4 rounded-full">
-            <FaPlay className="text-3xl" />
-          </button>
-        </div>
-      </div>
+     
+       
+<div
+  className="relative h-96 bg-cover bg-center"
+  style={{
+    backgroundImage: "url('https://via.placeholder.com/1920x1080')",
+  }}
+>
+
+  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <button
+      className="bg-white text-black p-4 rounded-full hover:bg-gray-200 transition"
+      onClick={() => {
+        
+        console.log("Play button clicked");
+      }}
+    >
+      <FaPlay className="text-3xl" />
+    </button>
+  </div>
+</div> 
 
       {/* Content Section */}
-      <div className="p-8">
+      <div className="p-8 mt-24">
         {/* Title and Details */}
         <div className="mb-4">
           <h1 className="text-4xl font-bold">Pacific Rim</h1>
@@ -36,86 +46,85 @@ const MovieDetails = () => {
             </div>
           </div>
         </div>
+ 
+      {/* Main Content */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-16">
+  {/* Left Column */}
+  <div>
+    <img
+      src="https://via.placeholder.com/300x450"
+      alt="Movie Poster"
+      className="rounded-lg w-full sm:w-3/4 mx-auto md:w-full"
+    />
+    <div className="mt-4 space-y-2">
+      <button className="flex items-center justify-center w-full bg-red-600 py-2 rounded-md text-xs sm:text-sm font-medium">
+        <FaRegHeart className="mr-2" />
+        Watch Later
+      </button>
+      <button className="flex items-center justify-center w-full bg-gray-800 py-2 rounded-md text-xs sm:text-sm font-medium">
+        <FaPlus className="mr-2" />
+        Add to List
+      </button>
+      <button className="flex items-center justify-center w-full bg-gray-800 py-2 rounded-md text-xs sm:text-sm font-medium">
+        Schedule
+      </button>
+    </div>
+  </div>
 
-        {/* Main Content */}
-        <div className="grid grid-cols-3 gap-8">
-          {/* Left Column */}
-          <div>
-            <img
-              src="https://via.placeholder.com/300x450"
-              alt="Movie Poster"
-              className="rounded-lg"
-            />
-            <div className="mt-4 space-y-2">
-              <button className="flex items-center justify-center w-full bg-red-600 py-2 rounded-md text-sm font-medium">
-                <FaRegHeart className="mr-2" />
-                Watch Later
-              </button>
-              <button className="flex items-center justify-center w-full bg-gray-800 py-2 rounded-md text-sm font-medium">
-                <FaPlus className="mr-2" />
-                Add to List
-              </button>
-              <button className="flex items-center justify-center w-full bg-gray-800 py-2 rounded-md text-sm font-medium">
-                Schedule
-              </button>
-            </div>
-          </div>
+  {/* Middle Column */}
+  <div>
+    <h2 className="text-lg sm:text-xl font-bold mb-4">Pacific Rim</h2>
+    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+      ACTION – SCIENCE FICTION – ADVENTURE
+    </p>
+    <p className="text-gray-400 text-xs sm:text-sm mt-4">
+      Lorem ipsum dolor sit amet consectetur. Nunc sit eget pharetra ut at duis non justo turpis. 
+      Elit aliquam rutrum diam feugiat egestas. Egent egestas in egestas tristique eget. 
+      Elit aliquam rutrum diam feugiat egestas eget volutpat commodo egestas lectus tristique 
+      mattis. Elit lobortis et malesuada imperdiet nullam venenatis non nec.
+    </p>
+    <div className="mt-4">
+      <p className="text-gray-400 text-xs sm:text-sm">
+        Country: US<br />
+        Language: English<br />
+        Popularity: 97%
+      </p>
+    </div>
+    <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+      <button className="bg-blue-600 py-2 px-4 rounded-md text-xs sm:text-sm font-medium flex items-center justify-center">
+        <FaPlay className="mr-2" />
+        Play
+      </button>
+      <button className="bg-gray-800 py-2 px-4 rounded-md text-xs sm:text-sm font-medium flex items-center justify-center">
+        <FaPlus className="mr-2" />
+        My List
+      </button>
+    </div>
+  </div>
 
-          {/* Middle Column */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Pacific Rim</h2>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              ACTION – SCIENCE FICTION – ADVENTURE
-            </p>
-            <p className="text-gray-400 text-sm mt-4">
-              Lorem ipsum dolor sit amet consectetur. Nunc sit eget pharetra ut
-              at duis non justo turpis. Elit aliquam rutrum diam feugiat egestas.
-              Egent egestas in egestas tristique eget. Elit aliquam rutrum diam
-              feugiat egestas eget volutpat commodo egestas lectus tristique
-              mattis. Elit lobortis et malesuada imperdiet nullam venenatis non
-              nec.
-            </p>
-            <div className="mt-4">
-              <p className="text-gray-400 text-sm">
-                Country: US<br />
-                Language: English<br />
-                Popularity: 97%
-              </p>
-            </div>
-            <div className="flex items-center space-x-4 mt-6">
-              <button className="bg-blue-600 py-2 px-4 rounded-md text-sm font-medium flex items-center">
-                <FaPlay className="mr-2" />
-                Play
-              </button>
-              <button className="bg-gray-800 py-2 px-4 rounded-md text-sm font-medium flex items-center">
-                <FaPlus className="mr-2" />
-                My List
-              </button>
-            </div>
-          </div>
-
-          {/* Right Column */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Gallery</h2>
-            <div className="space-y-4">
-              <div className="relative">
-                <img
-                  src="https://via.placeholder.com/300x150"
-                  alt="Trailer"
-                  className="rounded-lg"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                  <FaPlay className="text-white text-2xl" />
-                </div>
-              </div>
-              <img
-                src="https://via.placeholder.com/300x150"
-                alt="Gallery Image"
-                className="rounded-lg"
-              />
-            </div>
-          </div>
+  {/* Right Column */}
+  <div>
+    <h2 className="text-lg sm:text-xl font-bold mb-4">Gallery</h2>
+    <div className="space-y-4">
+      <div className="relative">
+        <img
+          src="https://via.placeholder.com/300x150"
+          alt="Trailer"
+          className="rounded-lg w-full"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <FaPlay className="text-white text-lg sm:text-2xl" />
         </div>
+      </div>
+      <img
+        src="https://via.placeholder.com/300x150"
+        alt="Gallery Image"
+        className="rounded-lg w-full"
+      />
+    </div>
+  </div>
+</div>
+
 
         {/* Cast Section */}
         <div className="mt-8">

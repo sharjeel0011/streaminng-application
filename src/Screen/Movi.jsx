@@ -90,7 +90,7 @@ const Movi = () => {
 
       {/* Render Sections */}
       {sectionsData.map((section, index) => (
-        <div key={index} className="mb-8 px-4">
+        <div key={index} className="p-5 px-4">
           <h2 className="text-lg font-bold mb-4">{section.title}</h2>
           <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {section.cards.map((card, idx) => (

@@ -9,12 +9,13 @@ import MovieDetails from '../Screen/Movidetails.jsx/Movidetails';
 import Footer from '../Components/Footer';
 import Login from '../Components/LoginScreen'
 import Signup from '../Components/Signup'
+import Sidebar from '../Components/Sidebar';
 const RouterConfig = () => {
     return (
         <>
         <BrowserRouter>
         <Nav/>
-       
+       <Sidebar/>
         <Routes>
          <Route path='/'  element={<Home/>} />
          <Route path='movies'  element={<Movies/>} />
