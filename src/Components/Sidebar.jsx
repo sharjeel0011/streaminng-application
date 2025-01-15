@@ -117,7 +117,7 @@ import { PiStarThin } from "react-icons/pi";
 const Sidebar = ({ setActiveScreen }) => {
   return (
     <div
-      className="h-[300px] mt-24 w-10 bg-neutral-800 flex flex-col items-center py-4 fixed top-0 left-0 z-50 shadow-lg"
+      className="h-[200px] mt-24 w-10 bg-transparent flex flex-col items-center py-4 fixed top-0 left-0 z-50 shadow-lg"
     >
       <button onClick={() => setActiveScreen("Movies")} className="mb-4">
         <CgHomeAlt className="text-white text-2xl" />
